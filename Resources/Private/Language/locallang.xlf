@@ -39,6 +39,32 @@
 			<trans-unit id="context.Normal" xml:space="preserve">
 				<source>Normal</source>
 			</trans-unit>
+
+
+			<trans-unit id="width" xml:space="preserve">
+				<source>Width</source>
+			</trans-unit>
+			<trans-unit id="background" xml:space="preserve">
+				<source>Background</source>
+			</trans-unit>
+			<trans-unit id="border" xml:space="preserve">
+				<source>Border</source>
+			</trans-unit>
+			<trans-unit id="border.none" xml:space="preserve">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="border.top" xml:space="preserve">
+				<source>Top</source>
+			</trans-unit>
+			<trans-unit id="border.bottom" xml:space="preserve">
+				<source>Bottom</source>
+			</trans-unit>
+			<trans-unit id="border.both" xml:space="preserve">
+				<source>Both</source>
+			</trans-unit>
+			<trans-unit id="image" xml:space="preserve">
+				<source>Image</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

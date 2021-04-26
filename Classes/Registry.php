@@ -20,6 +20,7 @@ class Registry
             'TcaFiles',
             'FluidNamespace',
             'Plugins',
+            'FlexForms',
             'Icon',
             ContextLoader::class,
         ];

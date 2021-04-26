@@ -1,0 +1,109 @@
+<T3DataStructure>
+    <meta type="array">
+        <langChildren type="integer">0</langChildren>
+        <langDisable type="integer">1</langDisable>
+    </meta>
+    <ROOT>
+        <type>array</type>
+        <el>
+            <settings.context>
+                <TCEforms>
+                    <label>LLL:EXT:responsive_content/Resources/Private/Language/locallang.xlf:width</label>
+                    <config>
+                        <type>select</type>
+                        <renderType>selectSingle</renderType>
+                        <itemsProcFunc>HDNET\ResponsiveContent\Controller\ContextController->selectValues</itemsProcFunc>
+                        <size>1</size>
+                        <minitems>1</minitems>
+                        <maxitems>1</maxitems>
+                    </config>
+                </TCEforms>
+            </settings.context>
+            <settings.background>
+                <TCEforms>
+                    <label>LLL:EXT:responsive_content/Resources/Private/Language/locallang.xlf:background</label>
+                    <config>
+                        <type>select</type>
+                        <renderType>selectSingle</renderType>
+                        <itemsProcFunc>HDNET\ResponsiveContent\Service\ContextColorService->getColorItems</itemsProcFunc>
+                        <size>1</size>
+                        <minitems>0</minitems>
+                        <maxitems>1</maxitems>
+                    </config>
+                </TCEforms>
+            </settings.background>
+            <settings.border>
+                <TCEforms>
+                    <label>LLL:EXT:responsive_content/Resources/Private/Language/locallang.xlf:border</label>
+                    <config>
+                        <type>select</type>
+                        <renderType>selectSingle</renderType>
+                        <items type='array'>
+                            <numIndex index='0' type='array'>
+                                <numIndex index='0'>
+                                    LLL:EXT:responsive_content/Resources/Private/Language/locallang.xlf:border.none
+                                </numIndex>
+                                <numIndex index='1'>none</numIndex>
+                            </numIndex>
+                            <numIndex index='1' type='array'>
+                                <numIndex index='0'>
+                                    LLL:EXT:responsive_content/Resources/Private/Language/locallang.xlf:border.top
+                                </numIndex>
+                                <numIndex index='1'>top</numIndex>
+                            </numIndex>
+                            <numIndex index='2' type='array'>
+                                <numIndex index='0'>
+                                    LLL:EXT:responsive_content/Resources/Private/Language/locallang.xlf:border.bottom
+                                </numIndex>
+                                <numIndex index='1'>bottom</numIndex>
+                            </numIndex>
+                            <numIndex index='3' type='array'>
+                                <numIndex index='0'>
+                                    LLL:EXT:responsive_content/Resources/Private/Language/locallang.xlf:border.both
+                                </numIndex>
+                                <numIndex index='1'>both</numIndex>
+                            </numIndex>
+                        </items>
+                        <size>1</size>
+                        <minitems>1</minitems>
+                        <maxitems>1</maxitems>
+                        <default>none</default>
+                    </config>
+                </TCEforms>
+            </settings.border>
+            <settings.image>
+                <TCEforms>
+                    <label>LLL:EXT:responsive_content/Resources/Private/Language/locallang.xlf:image</label>
+                    <config>
+                        <type>inline</type>
+                        <maxitems>1</maxitems>
+                        <foreign_table>sys_file_reference</foreign_table>
+                        <foreign_table_field>tablenames</foreign_table_field>
+                        <foreign_label>uid_local</foreign_label>
+                        <foreign_sortby>sorting_foreign</foreign_sortby>
+                        <foreign_selector>uid_local</foreign_selector>
+                        <foreign_selector_fieldTcaOverride type="array">
+                            <config>
+                                <appearance>
+                                    <elementBrowserType>file</elementBrowserType>
+                                    <elementBrowserAllowed>jpg,png</elementBrowserAllowed>
+                                </appearance>
+                            </config>
+                        </foreign_selector_fieldTcaOverride>
+                        <foreign_match_fields type="array">
+                            <fieldname>pi_flexform</fieldname>
+                        </foreign_match_fields>
+                        <appearance type="array">
+                            <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
+                            <headerThumbnail>
+                                <field>uid_local</field>
+                                <height>64</height>
+                                <width>64</width>
+                            </headerThumbnail>
+                        </appearance>
+                    </config>
+                </TCEforms>
+            </settings.image>
+        </el>
+    </ROOT>
+</T3DataStructure>
