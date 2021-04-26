@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:10Z" product-name="news">
+		<header/>
+		<body>
+			<trans-unit id="palette.grid" xml:space="preserve">
+				<source>Grid</source>
+			</trans-unit>
+			<trans-unit id="tt_content.cell_width_small" xml:space="preserve">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="tt_content.cell_width_medium" xml:space="preserve">
+				<source>Medium</source>
+			</trans-unit>
+			<trans-unit id="tt_content.cell_width_large" xml:space="preserve">
+				<source>Large</source>
+			</trans-unit>
+			<trans-unit id="wizard.context.header" xml:space="preserve">
+				<source>Context</source>
+			</trans-unit>
+			<trans-unit id="wizard.Default.description" xml:space="preserve">
+				<source>...</source>
+			</trans-unit>
+			<trans-unit id="wizard.Normal.description" xml:space="preserve">
+				<source>...</source>
+			</trans-unit>
+			<trans-unit id="wizard.Narrow.description" xml:space="preserve">
+				<source>...</source>
+			</trans-unit>
+			<trans-unit id="plugin.Context" xml:space="preserve">
+				<source>Context</source>
+			</trans-unit>
+			<trans-unit id="context.Default" xml:space="preserve">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="context.Narrow" xml:space="preserve">
+				<source>Narrow</source>
+			</trans-unit>
+			<trans-unit id="context.Normal" xml:space="preserve">
+				<source>Normal</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
