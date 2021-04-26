@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace HDNET\ResponsiveContent;
 
@@ -11,7 +11,7 @@ class Registry
     /**
      * Get the default autoloader configuration.
      */
-    public static function getAutoloaderConfiguration():array
+    public static function getAutoloaderConfiguration(): array
     {
         return [
             'StaticTyposcript',

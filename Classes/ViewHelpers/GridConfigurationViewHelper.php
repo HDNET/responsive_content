@@ -17,7 +17,7 @@ class GridConfigurationViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         parent::initializeArguments();
         $this->registerArgument('data', 'array', '');
@@ -40,14 +40,14 @@ class GridConfigurationViewHelper extends AbstractViewHelper
             $classes[] = self::mapClassName($size) . $value;
         }
 
-        if($classes === []) {
+        if ($classes === []) {
             $classes[] = 'col-12';
         }
 
         return \implode(' ', $classes);
     }
 
-    static protected function mapClassName(string $size): string
+    protected static function mapClassName(string $size): string
     {
         switch ($size) {
             case 'large':

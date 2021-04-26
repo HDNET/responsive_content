@@ -3,7 +3,7 @@
 /**
  * ContextController.
  */
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace HDNET\ResponsiveContent\Controller;
 
@@ -75,7 +75,7 @@ class ContextController extends AbstractController
      * @param array $config
      * @param $parentObject
      */
-    public function selectValues(array &$config, $parentObject)
+    public function selectValues(array &$config, $parentObject): void
     {
         $context = ContextLoader::getCurrentContexts();
         foreach ($context as $item) {

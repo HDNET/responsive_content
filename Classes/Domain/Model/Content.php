@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace HDNET\ResponsiveContent\Domain\Model;
 
@@ -15,7 +15,6 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
  */
 class Content extends AbstractEntity
 {
-
     /**
      * Cell width small.
      *
@@ -51,7 +50,7 @@ class Content extends AbstractEntity
     /**
      * @param int $cellWidthSmall
      */
-    public function setCellWidthSmall(int $cellWidthSmall)
+    public function setCellWidthSmall(int $cellWidthSmall): void
     {
         $this->cellWidthSmall = $cellWidthSmall;
     }
@@ -67,7 +66,7 @@ class Content extends AbstractEntity
     /**
      * @param int $cellWidthMedium
      */
-    public function setCellWidthMedium(int $cellWidthMedium)
+    public function setCellWidthMedium(int $cellWidthMedium): void
     {
         $this->cellWidthMedium = $cellWidthMedium;
     }
@@ -83,7 +82,7 @@ class Content extends AbstractEntity
     /**
      * @param int $cellWidthLarge
      */
-    public function setCellWidthLarge(int $cellWidthLarge)
+    public function setCellWidthLarge(int $cellWidthLarge): void
     {
         $this->cellWidthLarge = $cellWidthLarge;
     }

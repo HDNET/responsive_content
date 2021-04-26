@@ -33,7 +33,7 @@ class GridInformation implements PageLayoutViewDrawItemHookInterface
      * @param string $itemContent Item content
      * @param array $row Record row of tt_content
      */
-    public function preProcess(PageLayoutView &$parentObject, &$drawItem, &$headerContent, &$itemContent, array &$row)
+    public function preProcess(PageLayoutView &$parentObject, &$drawItem, &$headerContent, &$itemContent, array &$row): void
     {
         if (!\in_array('content', $this->info, true)) {
             return;
@@ -59,7 +59,7 @@ class GridInformation implements PageLayoutViewDrawItemHookInterface
      */
     public function addGridIcons(array $params, $object)
     {
-        if(!isset($params[0]) || $params[0] !== 'tt_content') {
+        if (!isset($params[0]) || $params[0] !== 'tt_content') {
             return '';
         }
         if (!\in_array('header', $this->info, true)) {

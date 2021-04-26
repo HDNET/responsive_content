@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace HDNET\ResponsiveContent\Loader;
 
@@ -68,7 +68,7 @@ class ContextLoader implements LoaderInterface
      * @param Loader $loader
      * @param array  $loaderInformation
      */
-    public function loadExtensionTables(Loader $loader, array $loaderInformation)
+    public function loadExtensionTables(Loader $loader, array $loaderInformation): void
     {
         self::$currentContexts = $loaderInformation;
 
@@ -108,7 +108,7 @@ mod.wizards.newContentElement.wizardItems.context.show := addToList(' . $name . 
      * @param Loader $loader
      * @param array  $loaderInformation
      */
-    public function loadExtensionConfiguration(Loader $loader, array $loaderInformation)
+    public function loadExtensionConfiguration(Loader $loader, array $loaderInformation): void
     {
         self::$currentContexts = $loaderInformation;
     }

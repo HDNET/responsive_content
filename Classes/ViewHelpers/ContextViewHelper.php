@@ -1,7 +1,7 @@
 <?php
 
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace HDNET\ResponsiveContent\ViewHelpers;
 
@@ -35,7 +35,7 @@ class ContextViewHelper extends AbstractViewHelper
     /**
      * Init arguments.
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         parent::initializeArguments();
         $this->registerArgument('context', 'string', 'Context Template name', false, '');
