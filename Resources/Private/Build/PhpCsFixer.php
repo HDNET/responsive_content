@@ -1,14 +1,17 @@
 <?php
 
 declare(strict_types=1);
-echo dirname(__DIR__, 3) . '/.Build/vendor/autoload.php';
-require dirname(__DIR__, 3) . '/.Build/vendor/autoload.php';
+
+$basePath = dirname(__DIR__, 3) . '/';
+require $basePath . '.Build/vendor/autoload.php';
 
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
     ->setFinder(
         PhpCsFixer\Finder::create()
-            ->in(dirname(__DIR__, 3) . '/Classes')
+            ->in($basePath . 'Classes')
+            ->in($basePath . 'Configuration')
+            ->in($basePath . 'Resources')
     )
     ->setRules([
         '@PSR12' => true,

@@ -56,4 +56,3 @@ ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
     '--palette--;LLL:EXT:responsive_content/Resources/Private/Language/locallang.xlf:palette.grid;grids'
 );
-
