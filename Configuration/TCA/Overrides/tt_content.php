@@ -43,13 +43,22 @@ $custom = [
         'cell_width_large' => [
             'config' => $gridConfig,
         ],
+        'cell_offset_small' => [
+            'config' => $gridConfig,
+        ],
+        'cell_offset_medium' => [
+            'config' => $gridConfig,
+        ],
+        'cell_offset_large' => [
+            'config' => $gridConfig,
+        ],
     ],
 ];
 
 $GLOBALS['TCA']['tt_content'] = ArrayUtility::mergeRecursiveDistinct($GLOBALS['TCA']['tt_content'], $custom);
 
 $GLOBALS['TCA']['tt_content']['palettes']['grids'] = [
-    'showitem' => 'cell_width_small,cell_width_medium,cell_width_large',
+    'showitem' => 'cell_width_small,cell_width_medium,cell_width_large,--linebreak--,cell_offset_small,cell_offset_medium,cell_offset_large',
 ];
 
 ExtensionManagementUtility::addToAllTCAtypes(

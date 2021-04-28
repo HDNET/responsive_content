@@ -106,6 +106,19 @@ class GridInformation implements PageLayoutViewDrawItemHookInterface
             $information['large'] = $cellWidthLarge;
         }
 
+        $cellOffsetSmall = MathUtility::forceIntegerInRange($row['cell_offset_small'], 0, 100);
+        if ($cellOffsetSmall > 0 && $cellOffsetSmall < 100) {
+            $information['smallOffset'] = $cellOffsetSmall;
+        }
+        $cellOffsetMedium = MathUtility::forceIntegerInRange($row['cell_offset_medium'], 0, 100);
+        if ($cellOffsetMedium > 0 && $cellOffsetMedium < 100) {
+            $information['mediumOffset'] = $cellOffsetMedium;
+        }
+        $cellOffsetLarge = MathUtility::forceIntegerInRange($row['cell_offset_large'], 0, 100);
+        if ($cellOffsetLarge > 0 && $cellOffsetLarge < 100) {
+            $information['largeOffset'] = $cellOffsetLarge;
+        }
+
         return $information;
     }
 }

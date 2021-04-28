@@ -50,12 +50,19 @@ class GridConfigurationViewHelper extends AbstractViewHelper
     protected static function mapClassName(string $size): string
     {
         switch ($size) {
-            case 'large':
-                return 'col-lg-';
+            case 'small':
+                return 'col-';
             case 'medium':
                 return 'col-md-';
+            case 'large':
+                return 'col-lg-';
+            case 'smallOffset':
+                return 'offset-';
+            case 'mediumOffset':
+                return 'offset-md-';
+            case 'largeOffset':
+                return 'offset-lg-';
         }
-        // small
-        return 'col-';
+        return 'wrong-';
     }
 }

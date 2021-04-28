@@ -15,6 +15,15 @@
 			<trans-unit id="tt_content.cell_width_large" xml:space="preserve">
 				<source>Large</source>
 			</trans-unit>
+			<trans-unit id="tt_content.cell_offset_small" xml:space="preserve">
+				<source>Offset Small</source>
+			</trans-unit>
+			<trans-unit id="tt_content.cell_offset_medium" xml:space="preserve">
+				<source>Offset Medium</source>
+			</trans-unit>
+			<trans-unit id="tt_content.cell_offset_large" xml:space="preserve">
+				<source>Offset Large</source>
+			</trans-unit>
 			<trans-unit id="wizard.context.header" xml:space="preserve">
 				<source>Context</source>
 			</trans-unit>

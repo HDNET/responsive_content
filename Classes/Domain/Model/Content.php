@@ -40,50 +40,86 @@ class Content extends AbstractEntity
     protected $cellWidthLarge = 0;
 
     /**
-     * @return int
+     * Cell offset small.
+     *
+     * @var int
+     * @DatabaseField(type="int")
      */
+    protected $cellOffsetSmall = 0;
+
+    /**
+     * Cell offset medium.
+     *
+     * @var int
+     * @DatabaseField(type="int")
+     */
+    protected $cellOffsetMedium = 0;
+
+    /**
+     * Cell offset large.
+     *
+     * @var int
+     * @DatabaseField(type="int")
+     */
+    protected $cellOffsetLarge = 0;
+
     public function getCellWidthSmall()
     {
         return $this->cellWidthSmall;
     }
 
-    /**
-     * @param int $cellWidthSmall
-     */
     public function setCellWidthSmall(int $cellWidthSmall): void
     {
         $this->cellWidthSmall = $cellWidthSmall;
     }
 
-    /**
-     * @return int
-     */
     public function getCellWidthMedium()
     {
         return $this->cellWidthMedium;
     }
 
-    /**
-     * @param int $cellWidthMedium
-     */
     public function setCellWidthMedium(int $cellWidthMedium): void
     {
         $this->cellWidthMedium = $cellWidthMedium;
     }
 
-    /**
-     * @return int
-     */
     public function getCellWidthLarge()
     {
         return $this->cellWidthLarge;
     }
 
-    /**
-     * @param int $cellWidthLarge
-     */
     public function setCellWidthLarge(int $cellWidthLarge): void
     {
         $this->cellWidthLarge = $cellWidthLarge;
+    }
+
+    public function getCellOffsetSmall(): int
+    {
+        return $this->cellOffsetSmall;
+    }
+
+    public function setCellOffsetSmall(int $cellOffsetSmall): void
+    {
+        $this->cellOffsetSmall = $cellOffsetSmall;
+    }
+
+    public function getCellOffsetMedium(): int
+    {
+        return $this->cellOffsetMedium;
+    }
+
+    public function setCellOffsetMedium(int $cellOffsetMedium): void
+    {
+        $this->cellOffsetMedium = $cellOffsetMedium;
+    }
+
+    public function getCellOffsetLarge(): int
+    {
+        return $this->cellOffsetLarge;
+    }
+
+    public function setCellOffsetLarge(int $cellOffsetLarge): void
+    {
+        $this->cellOffsetLarge = $cellOffsetLarge;
     }
 }
