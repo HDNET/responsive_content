@@ -32,13 +32,8 @@ $gridConfig = [
     'default' => '0',
 ];
 
-$offsetItems = [
-    [
-        '',
-        '0',
-    ],
-];
-for($i = 1; $i <= CalculationUtility::OFFSET_COL_NUMBER; $i++) {
+$offsetItems = [];
+for($i = 0; $i <= CalculationUtility::OFFSET_COL_NUMBER; $i++) {
     $offsetItems[] = [
         $i . ' - ' . CalculationUtility::getPercentByCols($i) . '%',
         $i,

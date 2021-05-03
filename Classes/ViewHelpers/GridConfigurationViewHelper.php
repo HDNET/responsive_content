@@ -57,11 +57,11 @@ class GridConfigurationViewHelper extends AbstractViewHelper
             case 'large':
                 return 'col-lg-';
             case 'smallOffset':
-                return 'offset-';
+                return 'offset offset-';
             case 'mediumOffset':
-                return 'offset-md-';
+                return 'offset-md offset-md-';
             case 'largeOffset':
-                return 'offset-lg-';
+                return 'offset-lg offset-lg-';
         }
         return 'wrong-';
     }
