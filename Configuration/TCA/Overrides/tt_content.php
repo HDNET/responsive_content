@@ -32,6 +32,22 @@ $gridConfig = [
     'default' => '0',
 ];
 
+$offsetItems = [
+    [
+        '',
+        '0',
+    ],
+];
+for($i = 1; $i <= CalculationUtility::OFFSET_COL_NUMBER; $i++) {
+    $offsetItems[] = [
+        $i . ' - ' . CalculationUtility::getPercentByCols($i) . '%',
+        $i,
+    ];
+}
+
+$offsetConfig = $gridConfig;
+$offsetConfig['items'] = $offsetItems;
+
 $custom = [
     'columns' => [
         'cell_width_small' => [
@@ -44,13 +60,13 @@ $custom = [
             'config' => $gridConfig,
         ],
         'cell_offset_small' => [
-            'config' => $gridConfig,
+            'config' => $offsetConfig,
         ],
         'cell_offset_medium' => [
-            'config' => $gridConfig,
+            'config' => $offsetConfig,
         ],
         'cell_offset_large' => [
-            'config' => $gridConfig,
+            'config' => $offsetConfig,
         ],
     ],
 ];

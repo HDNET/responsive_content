@@ -7,6 +7,7 @@ namespace HDNET\ResponsiveContent\Utility;
 class CalculationUtility
 {
     public const COL_NUMBER = 12;
+    public const OFFSET_COL_NUMBER = 11;
 
     public static function getPercentByCols(int $cols): float
     {
