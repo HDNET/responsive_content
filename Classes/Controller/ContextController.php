@@ -20,6 +20,7 @@ use TYPO3\CMS\Fluid\View\StandaloneView;
  */
 class ContextController extends AbstractController
 {
+
     /**
      * Queue.
      *
@@ -36,12 +37,16 @@ class ContextController extends AbstractController
      */
     public function indexAction()
     {
-        $context = \trim((string)$this->settings['context']);
-        $previous = (bool)$this->settings['previous'];
+        $context = \trim((string) $this->settings['context']);
+        $previous = (int) $this->settings['previous'];
         $contextCount = \count(self::$queue);
 
         if ($previous && $contextCount > 1) {
-            $context = self::$queue[$contextCount - 2];
+            $previous--;
+            if (!isset(self::$queue[$contextCount - $previous])) {
+                $previous = 0;
+            }
+            $context = self::$queue[$contextCount - $previous];
         }
 
         // End
@@ -97,7 +102,11 @@ class ContextController extends AbstractController
      */
     protected function startContext($name): string
     {
-        return $this->getTemplateParts($name)[0];
+        $content = '';
+        if ($this->isDebugMode()) {
+            $content .= 'START(' . $name . ')';
+        }
+        return $content . $this->getTemplateParts($name)[0];
     }
 
     /**
@@ -110,7 +119,11 @@ class ContextController extends AbstractController
      */
     protected function endContext($name): string
     {
-        return $this->getTemplateParts($name)[1];
+        $content = $this->getTemplateParts($name)[1];
+        if ($this->isDebugMode()) {
+            $content .= 'END(' . $name . ')';
+        }
+        return $content;
     }
 
     /**
@@ -124,7 +137,7 @@ class ContextController extends AbstractController
     protected function getTemplateParts(string $name): array
     {
         $config = $this->getContextConfiguration($name);
-        $keyHash = GeneralUtility::shortMD5((string)\time());
+        $keyHash = GeneralUtility::shortMD5((string) \time());
         $view = GeneralUtility::makeInstance(StandaloneView::class);
         $settings = $this->settings;
         if (isset($settings['image']) && MathUtility::canBeInterpretedAsInteger($settings['image'])) {
@@ -157,5 +170,10 @@ class ContextController extends AbstractController
             }
         }
         throw new \Exception('Invalid context name: ' . $name, 435645);
+    }
+
+    protected function isDebugMode(): bool
+    {
+        return (bool) $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['responsive_content']['debugMode'];
     }
 }

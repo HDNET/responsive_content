@@ -41,7 +41,7 @@ class ContextViewHelper extends AbstractViewHelper
         $this->registerArgument('context', 'string', 'Context Template name', false, '');
         $this->registerArgument('finish', 'boolean', 'Finish the last context', false, false);
         $this->registerArgument('finishOnly', 'boolean', 'Finish the context, if there are open contexts', false, false);
-        $this->registerArgument('previous', 'boolean', 'Return to the previous context', false, false);
+        $this->registerArgument('previous', 'int', 'Restart x previous context back', false, 0);
     }
 
     /**
@@ -70,7 +70,7 @@ class ContextViewHelper extends AbstractViewHelper
             $content .= self::renderUserObject($config);
         } elseif ((bool)$arguments['previous']) {
             $prevoius = $config;
-            $prevoius['settings.']['previous'] = 1;
+            $prevoius['settings.']['previous'] = (int)$arguments['previous'];
             $content .= self::renderUserObject($prevoius);
         }
 

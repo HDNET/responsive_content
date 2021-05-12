@@ -1,0 +1,2 @@
+# cat=basic//10; type=boolean; label=Debug mode: Enable debug output of the context in the rendering process
+debugMode = 0
