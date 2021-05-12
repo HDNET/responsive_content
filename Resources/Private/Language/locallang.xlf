@@ -36,11 +36,17 @@
 			<trans-unit id="wizard.Narrow.description" xml:space="preserve">
 				<source>...</source>
 			</trans-unit>
+			<trans-unit id="wizard.None.description" xml:space="preserve">
+				<source>...</source>
+			</trans-unit>
 			<trans-unit id="plugin.Context" xml:space="preserve">
 				<source>Context</source>
 			</trans-unit>
 			<trans-unit id="context.Default" xml:space="preserve">
 				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="context.None" xml:space="preserve">
+				<source>None</source>
 			</trans-unit>
 			<trans-unit id="context.Narrow" xml:space="preserve">
 				<source>Narrow</source>
