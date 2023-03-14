@@ -37,8 +37,8 @@ class ContextController extends AbstractController
      */
     public function indexAction()
     {
-        $context = \trim((string) $this->settings['context']);
-        $previous = (int) $this->settings['previous'];
+        $context = \trim((string) ($this->settings['context'] ?? ''));
+        $previous = (int) ($this->settings['previous'] ?? 0);
         $contextCount = \count(self::$queue);
 
         if ($previous && $contextCount > 1) {
@@ -174,6 +174,6 @@ class ContextController extends AbstractController
 
     protected function isDebugMode(): bool
     {
-        return (bool) $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['responsive_content']['debugMode'];
+        return (bool) ($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['responsive_content']['debugMode'] ?? false);
     }
 }
