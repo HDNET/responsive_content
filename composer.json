@@ -4,9 +4,9 @@
 	"description": "",
 	"homepage": "https://www.hdnet.de",
 	"require": {
-		"php": "^7.4",
-		"typo3/cms-core": "^10.4",
-		"typo3/cms-backend": "^10.4",
+		"php": "^7.4 || ^8.1",
+		"typo3/cms-core": "^10.4 || ^11.5",
+		"typo3/cms-backend": "^10.4 || ^11.5",
 		"lochmueller/autoloader": "^7.1"
 	},
 	"config": {
