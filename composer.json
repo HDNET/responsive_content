@@ -1,6 +1,7 @@
 {
 	"name": "hdnet/responsive-content",
 	"type": "typo3-cms-extension",
+	"license": "GPL-2.0-or-later",
 	"description": "",
 	"homepage": "https://www.hdnet.de",
 	"require": {
@@ -14,6 +15,10 @@
 		"bin-dir": ".Build/bin",
 		"preferred-install": {
 			"*": "dist"
+		},
+		"allow-plugins": {
+			"typo3/cms-composer-installers": true,
+			"typo3/class-alias-loader": true
 		}
 	},
 	"autoload": {
