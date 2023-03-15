@@ -20,7 +20,6 @@ use TYPO3\CMS\Fluid\View\StandaloneView;
  */
 class ContextController extends AbstractController
 {
-
     /**
      * Queue.
      *

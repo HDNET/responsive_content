@@ -5,7 +5,7 @@ declare(strict_types=1);
 $basePath = dirname(__DIR__, 3) . '/';
 require $basePath . '.Build/vendor/autoload.php';
 
-return PhpCsFixer\Config::create()
+return (new PhpCsFixer\Config())
     ->setRiskyAllowed(true)
     ->setFinder(
         PhpCsFixer\Finder::create()

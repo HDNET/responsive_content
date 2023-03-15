@@ -113,7 +113,7 @@ class GridInformation implements PageLayoutViewDrawItemHookInterface
         $cellOffsetMedium = MathUtility::forceIntegerInRange($row['cell_offset_medium'], 0, 100);
         $cellOffsetLarge = MathUtility::forceIntegerInRange($row['cell_offset_large'], 0, 100);
         $isOneOffsetSet = (bool) ($cellOffsetSmall + $cellOffsetMedium + $cellOffsetLarge);
-        if(!$isOneOffsetSet) {
+        if (!$isOneOffsetSet) {
             return $information;
         }
 
