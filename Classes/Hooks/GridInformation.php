@@ -62,6 +62,9 @@ class GridInformation implements PageLayoutViewDrawItemHookInterface
         if (!isset($params[0]) || $params[0] !== 'tt_content') {
             return '';
         }
+        if (!isset($params[2]) || !is_array($params[2])) {
+            return '';
+        }
         if (!\in_array('header', $this->info, true)) {
             return '';
         }
