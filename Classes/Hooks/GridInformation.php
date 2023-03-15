@@ -62,15 +62,18 @@ class GridInformation implements PageLayoutViewDrawItemHookInterface
         if (!isset($params[0]) || $params[0] !== 'tt_content') {
             return '';
         }
+        if (!isset($params[2]) || !is_array($params[2])) {
+            return '';
+        }
         if (!\in_array('header', $this->info, true)) {
             return '';
         }
         $path = '/typo3conf/ext/responsive_content/Resources/Public/Icons/Backend/';
         $information = $this->getGridInformation($params[2]);
         $out = [
-            '<img src="' . $path . 'ico-smartphone.png" width="20" /> ' . $this->getNumber((int) $information['small']),
-            '<img src="' . $path . 'ico-tablet.png" width="20" /> ' . $this->getNumber((int) $information['medium']),
-            '<img src="' . $path . 'ico-desktop.png" width="20" /> ' . $this->getNumber((int) $information['large']),
+            '<img src="' . $path . 'ico-smartphone.png" width="20" /> ' . $this->getNumber((int) ($information['small'] ?? 0)),
+            '<img src="' . $path . 'ico-tablet.png" width="20" /> ' . $this->getNumber((int) ($information['medium'] ?? 0)),
+            '<img src="' . $path . 'ico-desktop.png" width="20" /> ' . $this->getNumber((int) ($information['large'] ?? 0)),
         ];
 
         return '&nbsp;' . \implode('&nbsp;', $out);
